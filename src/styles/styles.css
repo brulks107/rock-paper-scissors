@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Indie+Flower&display=swap');
+:root {
+    --header-bg-color: #EBD704;
+    --body-bg-color: #41575a;
+    --font-family: 'Bree Serif', serif;
+    --border-radius: 12px;
+    --new-game-radius: 90px;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: content-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--body-bg-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 0.5%;
+}
+
+header > h1 {
+    color: var(--body-bg-color);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 170%
+}
+
+.score {
+    margin: 3% auto;
+    width: 35%;
+    padding: 2%;
+    border: solid var(--header-bg-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-size: 70px;
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+}
+
+.player-score-label {
+    background-color: white;
+    padding: 4px;
+    width: 165px;
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    position: absolute;
+    font-size: 25px;
+}
+
+.new-game {
+    height: var(--new-game-radius);
+    width: var(--new-game-radius);
+    text-align: center;
+    line-height: 90px;
+    border: 3px solid black;
+    border-radius: 50%;    
+    background: #a8251d;
+    color: white;
+    font-size: 18px;
+    font-family: 'Indie Flower', cursive;
+    left: 230px;
+    bottom: -50px;
+    position: absolute;    
+}
+
+.new-game:hover {
+    cursor: pointer;
+    border: 3px solid grey;
+    background: #e17e78;
+    
+}
+
+#user-label {
+    top: -15px;
+    left: 9%;
+}
+
+#machine-label {
+    top: -15px;
+    right: 9%;
+}
+
+.result {
+    margin: 30px auto;
+    width: auto;
+    padding: 20px auto;
+    text-align: center;
+    height: 100px;
+}
+
+#result-text {
+    font-family: var(--font-family);
+    font-size: 40px;
+    color: white;
+    margin: 5px auto;
+}
+
+.choices-block {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.choice {
+    display: inline-block;
+    background-color: black;
+    margin: auto 10px;
+    border: 15px solid black;
+    border-radius: 50%;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: grey;
+    border: 15px solid grey;
+}
+
+
+
