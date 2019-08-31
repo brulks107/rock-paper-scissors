@@ -3,8 +3,11 @@
     --header-bg-color: #EBD704;
     --body-bg-color: #41575a;
     --font-family: 'Bree Serif', serif;
+    --score-border-radius: 2vw;
     --player-score-border-radius: 10vw;
-    --new-game-radius: 7.5vw;
+    --player-score-height: 11vh;
+    --player-score-side: 25vw;
+    --new-game-radius: 6vw;
     --images-size: 12vw;
 }
 
@@ -21,7 +24,7 @@ html, body {
 
 header {
     background-color: var(--header-bg-color);
-    /*! padding: %; */
+    padding: 0.5vh;
     height: 5vh;
 }
 
@@ -29,19 +32,19 @@ header > h1 {
     color: var(--body-bg-color);
     text-align: center;
     font-family: var(--font-family);
-    /* font-size: 170% */
+    font-size: 2vw
 }
 
 .score {
-    margin: 0% 20vw;
+    margin: 2vh 20vw;
     /*! width: 35%; */
     border: solid var(--header-bg-color);
-    border-radius: var(--border-radius);
+    border-radius: var(--score-border-radius);
     text-align: center;
     font-size: 10vw;
     /*! position: relative; */
     font-family: 'Indie Flower', cursive;
-    background-color: blue;
+    /*! background-color: blue; */
     height: 30vh;
 }
 
@@ -56,29 +59,29 @@ header > h1 {
 }
 
 #user-label {
-    top: 7vh;
-    left: 25vw;
+    top: var(--player-score-height);
+    left: var(--player-score-side);
 }
 
 #machine-label {
-    top: 7vh;
-    right: 25vw;
+    top: var(--player-score-height);
+    right: var(--player-score-side);
 }
 
 .new-game {
     height: var(--new-game-radius);
     width: var(--new-game-radius);
     text-align: center;
-    line-height: 7vw;
+    line-height: 4vw;
     border: 0.6vw solid black;
     border-radius: 50%;    
     background: #a8251d;
     color: white;
-    font-size: 1.4vw;
+    font-size: 1.15vw;
     font-family: 'Indie Flower', cursive;
     position: absolute;
-    top: 27.5vh;
-    left: 46vw;
+    top: 32vh;
+    left: 46.5vw;
     transition: border 0.3s ease;
     transition: top, left, line-height 0s;
 }
@@ -86,9 +89,9 @@ header > h1 {
 .new-game:hover {
     cursor: pointer;
     border: 0.8vw solid grey;
-    top: 27.3vh;
-    left: 45.8vw;
-    line-height: 6.8vw;
+    top: 31.8vh;
+    left: 46.3vw;
+    line-height: 4.2vw;
 }
 
 .result {
@@ -97,7 +100,7 @@ header > h1 {
     padding: 0 0;
     text-align: center;
     height: 100px;
-    background-color: green;
+    /*! background-color: green; */
     height: 25vh;
 }
 
@@ -111,7 +114,7 @@ header > h1 {
 .choices-block {
     text-align: center;
     height: 40vh;
-    background-color: orange;
+    /*! background-color: orange; */
 }
 
 .choice {
@@ -120,7 +123,7 @@ header > h1 {
     border-radius: 50%;
     height: var(--images-size);
     width: var(--images-size);
-    margin: 5vw 6vw;
+    margin: 3vw 6vw;
     transition: background-color, border, 0.3s ease;
     transition: margin 0s;
 }
@@ -129,7 +132,7 @@ header > h1 {
     cursor: pointer;
     background-color: grey;
     border: 1.5vw solid grey;
-    margin: 4.8vw 5.8vw;
+    margin: 2.8vw 5.8vw;
 }
 
 .footer {
