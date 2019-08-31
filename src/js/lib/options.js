@@ -1,13 +1,12 @@
+import * as resulText from '../views/resultText.js';
+
+const winColor = '#1FCE23';
+const loseColor = '#a8251d';
+
 export const clearScore = () => {
   userScore = 0;
   computerScore = 0;
 }
-
-export const showWinMessage = () => console.log('WIN');
-
-export const showLoseMessage = () => console.log('LOSE');
-
-export const showDrawMessage = () => console.log('DRAW');
 
 export const increaseUserScore = () => {
   userScore += 1;
@@ -20,9 +19,18 @@ export const increaseComputerScore = () => {
 }
 
 export const endOfGame = () => {
-  if (userScore >= finalResult || computerScore >= finalResult) {
-    showWinerMessage(userScore, computerScore);
+  if (userScore >= finalResult)  {
+    resulText.changeTextFirstRow('End of game');
+    resulText.changeToResultColor(winColor);
+    resulText.changeTextSecondRow('CONGRATULATIONS!!!!');
     clearScore();
+  }
+  if (computerScore >= finalResult){
+    resulText.changeTextFirstRow('End of game');
+    resulText.changeToResultColor(loseColor);
+    resulText.changeTextSecondRow('Maybe next time');
+    clearScore();
+
   }
 
 }

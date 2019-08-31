@@ -1,8 +1,16 @@
-import { showWinMessage, showLoseMessage, showDrawMessage, increaseUserScore, increaseComputerScore, endOfGame } from '../lib/options.js';
+import * as resultText from '../views/resultText.js';
+import {
+  increaseUserScore,
+  increaseComputerScore,
+  endOfGame,
+} from '../lib/options.js';
 
 const rock = 'rock';
 const paper = 'paper';
 const scissors = 'scissors';
+const winColor = '#1FCE23';
+const loseColor = '#a8251d';
+const drawColor = '#DCCB09';
 
 const game = userChoice => {
   const computer = computerChoice();
@@ -12,20 +20,26 @@ const game = userChoice => {
 
   const resultOptions = {
     'win': () => {
-      showWinMessage()
+      resultText.changeTextFirstRow(`${userChoice.toUpperCase()} - ${computer.toUpperCase()}`);
+      resultText.changeToResultColor(winColor);
+      resultText.changeTextSecondRow('YOU WIN :)');
       increaseUserScore();
     },
     'lose': () => {
-      showLoseMessage();
+      resultText.changeTextFirstRow(`${userChoice.toUpperCase()} - ${computer.toUpperCase()}`);
+      resultText.changeToResultColor(loseColor);
+      resultText.changeTextSecondRow('YOU LOSE :(');
       increaseComputerScore();
     },
     'draw': () => {
-      showDrawMessage();
+      resultText.changeTextFirstRow(`${userChoice.toUpperCase()} - ${computer.toUpperCase()}`);
+      resultText.changeToResultColor(drawColor);
+      resultText.changeTextSecondRow('DRAW ~.~');
     },
   };
 
   resultOptions[result]();
-  endOfGame(finalResult);
+  endOfGame();
 
 }
 
