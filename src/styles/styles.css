@@ -69,14 +69,16 @@ header > h1 {
     position: absolute;
     top: 27.5vh;
     left: 46vw;
-    transition: all 0.3s ease;
+    transition: border 0.3s ease;
+    transition: top, left, line-height 0s;
 }
 
 .new-game:hover {
     cursor: pointer;
-    border: 3px solid grey;
-    background: #e17e78;
-    
+    border: 0.8vw solid grey;
+    top: 27.3vh;
+    left: 45.8vw;
+    line-height: 6.8vw;
 }
 
 #user-label {
