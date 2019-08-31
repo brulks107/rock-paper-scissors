@@ -3,6 +3,7 @@ import {
   increaseUserScore,
   increaseComputerScore,
   endOfGame,
+  scoreAfterDraw,
 } from '../lib/options.js';
 
 const rock = 'rock';
@@ -35,6 +36,7 @@ const game = userChoice => {
       resultText.changeTextFirstRow(`${userChoice.toUpperCase()} - ${computer.toUpperCase()}`);
       resultText.changeToResultColor(drawColor);
       resultText.changeTextSecondRow('DRAW ~.~');
+      scoreAfterDraw();
     },
   };
 
