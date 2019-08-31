@@ -4,6 +4,7 @@ import startNewGame from './controllers/startNewGame.js'
 window.userScore = 0;
 window.computerScore = 0;
 window.finalResult = 5;
+window.resultTextInitialMessage = 'Select your choice to start the game';
 
 const rock = 'rock';
 const paper = 'paper';
