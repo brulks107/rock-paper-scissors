@@ -5,8 +5,10 @@ const paper = 'paper';
 const scissors = 'scissors';
 
 const game = userChoice => {
-  const result = resultGame(userChoice);
+  const computer = computerChoice();
+  const result = resultGame(userChoice, computer);
   console.log(`USER: ${userChoice}`);
+  console.log(`COMPUTER: ${computer} `);
 
   const resultOptions = {
     'win': () => {
@@ -27,10 +29,9 @@ const game = userChoice => {
 
 }
 
-const resultGame = userChoice => {
-  const computer = computerChoice();
+const resultGame = (userChoice, computerChoice) => {
   let returnValue;
-  switch (`${userChoice}-${computer}`) {
+  switch (`${userChoice}-${computerChoice}`) {
     case `${rock}-${scissors}`:
     case `${paper}-${rock}`:
     case `${scissors}-${paper}`:
@@ -57,7 +58,6 @@ const computerChoice = () => {
     '2': scissors,
   };
   const choiceNumber = Math.floor(Math.random() * 3);
-  console.log(`COMPUTER: ${choice[choiceNumber]} `);
 
   return choice[choiceNumber];
 }
