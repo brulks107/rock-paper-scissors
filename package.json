@@ -1,17 +1,22 @@
 {
   "name": "rock-paper-scissors",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Amazing game to play mitical rock-paper-scissors with computer",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "app:serve": "http-server src/"
+    "lint": "eslint",
+    "app:serve": "http-server src/",
+    "app:build": ""
   },
   "author": "amadridlar",
+  "eslint": "^6.3.0",
   "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "http-server": "^0.11.1"
-  },
-  "dependencies": {}
+  }
 }

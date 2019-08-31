@@ -1,5 +1,5 @@
 import game from './controllers/game.js';
-import startNewGame from './controllers/startNewGame.js'
+import startNewGame from './controllers/startNewGame.js';
 
 window.userScore = 0;
 window.computerScore = 0;
@@ -18,4 +18,4 @@ const newGameBtn = document.getElementById('new-game-button');
 rockElement.addEventListener('click', () => game(rock));
 paperElement.addEventListener('click', () => game(paper));
 scissorsElement.addEventListener('click', () => game(scissors));
-newGameBtn.addEventListener('click', () => startNewGame())
+newGameBtn.addEventListener('click', () => startNewGame());
