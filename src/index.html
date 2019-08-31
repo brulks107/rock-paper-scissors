@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="assets/favicon.ico"/>
+    <link rel="icon" href="assets/favicon.ico" />
     <title>Rock-Paper-Scissors</title>
 </head>
 
@@ -12,36 +13,29 @@
     <header>
         <h1>Don't try to cheat me!!!</h1>
     </header>
-
     <div class="score">
         <div class="player-score-label" id="user-label">You</div>
         <div class="player-score-label" id="machine-label">Great machine</div>
-        <span id="user-score">0</span>
-        <span>:</span>
-        <span id="machine-score">0</span>
+        <div class="score-board">
+            <span id="user-score">0</span>
+            <span>:</span>
+            <span id="machine-score">0</span>
+        </div>
         <button class="new-game" id='new-game-button'>New Game</button>
     </div>
-
     <div class="result">
         <div id="result-text">
             <p>You selected <u>Paper</u>, Machine selected <u>Rock</u></p>
             <h3>YOU WIN :)</h3>
         </div>
     </div>
-
     <div class="choices-block">
-        <div class="choice" id="rock">
-            <img src="assets/rock.png">
-        </div>
-        <div class="choice" id="paper">
-            <img src="assets/paper.png">
-        </div>
-        <div class="choice" id="scissors">
-            <img src="assets/scissors.png">
-        </div>
-
+        <img class="choice" id="rock" src="assets/rock.png">
+        <img class="choice" id="paper" src="assets/paper.png">
+        <img class="choice" id="scissors" src="assets/scissors.png">
     </div>
-
+    <div class="footer"></div>
 </body>
 <script src="js/app.js"></script>
+
 </html>
