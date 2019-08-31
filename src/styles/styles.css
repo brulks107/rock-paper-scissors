@@ -3,7 +3,7 @@
     --header-bg-color: #EBD704;
     --body-bg-color: #41575a;
     --font-family: 'Bree Serif', serif;
-    --border-radius: 12px;
+    --player-score-border-radius: 10vw;
     --new-game-radius: 7.5vw;
     --images-size: 12vw;
 }
@@ -47,12 +47,22 @@ header > h1 {
 
 .player-score-label {
     background-color: white;
-    padding: 4px;
-    width: 165px;
-    border-radius: var(--border-radius);
+    padding: 0.2vw 0.2vh;
+    width: 10vw;
+    border-radius: var(--player-score-border-radius);
     font-family: var(--font-family);
     position: absolute;
-    font-size: 25px;
+    font-size: 1.4vw;
+}
+
+#user-label {
+    top: 7vh;
+    left: 25vw;
+}
+
+#machine-label {
+    top: 7vh;
+    right: 25vw;
 }
 
 .new-game {
@@ -79,16 +89,6 @@ header > h1 {
     top: 27.3vh;
     left: 45.8vw;
     line-height: 6.8vw;
-}
-
-#user-label {
-    top: -15px;
-    left: 9%;
-}
-
-#machine-label {
-    top: -15px;
-    right: 9%;
 }
 
 .result {
