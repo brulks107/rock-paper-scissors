@@ -1,6 +1,6 @@
 {
   "name": "rock-paper-scissors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Amazing game to play mitical rock-paper-scissors with computer",
   "directories": {
     "test": "test"
