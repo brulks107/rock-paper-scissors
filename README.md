@@ -9,3 +9,5 @@ First to get five points wins!
 If you want to restart the game, just press "New Game" button.
 
 Enjoy and don't try to cheat the system (it is imposible :^|)
+
+<img src="app-image.png">
