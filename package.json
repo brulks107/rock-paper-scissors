@@ -9,11 +9,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
     "app:serve": "http-server src/",
-    "app:build": ""
+    "app:build": "babel src --out-dir dist",
+    "preapp:build": "rm -rf dist && mkdir dist",
+    "postapp:build": "cp -R src/assets src/styles src/index.html dist"
   },
   "author": "amadridlar",
   "eslint": "^6.3.0",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "babel-preset-minify": "^0.5.1",
     "eslint": "^6.3.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
