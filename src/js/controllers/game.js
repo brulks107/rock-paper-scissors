@@ -19,7 +19,7 @@ const computerChoice = () => {
     1: paper,
     2: scissors,
   };
-  const choiceNumber = Math.floor(Math.random() * 3);
+  const choiceNumber = Math.floor(Math.random() * 3); //NOSONAR
 
   return choice[choiceNumber];
 };
