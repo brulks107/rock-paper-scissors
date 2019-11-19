@@ -1,5 +1,5 @@
 import * as resulText from '../views/resultText.js';
-import updateScore from '../views/score.js';
+import updateScore from '../views/updateScore.js';
 
 const winColor = '#1FCE23';
 const loseColor = '#a8251d';
