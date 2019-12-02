@@ -1,4 +1,5 @@
 import * as resultText from '../views/resultText.js';
+import computerModule from '../lib/computerChoice.js';
 import {
   increaseUserScore,
   increaseComputerScore,
@@ -13,16 +14,7 @@ const winColor = '#1FCE23';
 const loseColor = '#a8251d';
 const drawColor = '#DCCB09';
 
-const computerChoice = () => {
-  const choice = {
-    0: rock,
-    1: paper,
-    2: scissors,
-  };
-  const choiceNumber = Math.floor(Math.random() * 3); //NOSONAR
-
-  return choice[choiceNumber];
-};
+window.computer = computerModule;
 
 const resultGame = (userChoice, computer) => {
   let returnValue;
@@ -43,13 +35,13 @@ const resultGame = (userChoice, computer) => {
       returnValue = 'draw';
       break;
     default:
-      throw new Error(`Ther is an error with options ${userChoice}-${computer}`);
+      throw new Error(`There is an error with options ${userChoice}-${computer}`);
   }
   return returnValue;
 };
 
 const game = userChoice => {
-  const computer = computerChoice();
+  const computer = window.computer.computerChoice();
   const result = resultGame(userChoice, computer);
   console.log(`USER: ${userChoice}`);
   console.log(`COMPUTER: ${computer} `);
