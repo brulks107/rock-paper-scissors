@@ -4,5 +4,9 @@ node_modules
 # builds
 dist
 
+# reports 
+test/reports
+
 # external tools
 .scannerwork
+.vscode
