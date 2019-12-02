@@ -11,3 +11,19 @@ If you want to restart the game, just press "New Game" button.
 Enjoy and don't try to cheat the system (it is imposible :^|)
 
 <img src="app-image.png">
+
+## Starting the app
+
+### Install dependencies
+```npm install```
+
+### Start the server
+```npm run app:serve```
+
+By default, it starts the server in http://localhost:8080. If the port is busy, it will start in the next free port
+
+### Access the app
+
+Assuming the servers is started in port 8080, just navigate to http://localhost:8080/index
+
+
