@@ -7,6 +7,9 @@ dist
 # reports 
 test/reports
 
+# cache
+test/unit/jestcache
+
 # external tools
 .scannerwork
 .vscode
