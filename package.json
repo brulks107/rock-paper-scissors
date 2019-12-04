@@ -17,12 +17,15 @@
     "preapp:build": "rm -rf dist && mkdir dist",
     "pree2e:run": "node test/utils/rmReports",
     "sonar": "sonar-scanner",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config=test/jest.config.js",
+    "test:coverage": "jest --config=test/jest.config.js --coverage"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.4",
     "babel-preset-minify": "^0.5.1",
+    "chai": "^4.2.0",
     "cucumber-html-reporter": "^5.0.2",
     "cypress": "^3.6.1",
     "cypress-cucumber-preprocessor": "^1.16.2",
@@ -30,6 +33,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "http-server": "^0.11.1",
+    "jest": "^24.9.0",
     "multiple-cucumber-html-reporter": "^1.13.1",
     "rimraf": "^3.0.0",
     "sonar-scanner": "^3.1.0",
