@@ -5,9 +5,9 @@ import {
   increaseUserScore,
   increaseComputerScore,
   scoreAfterDraw,
-} from '../../src/js/lib/options';
+} from '../../../src/js/lib/options';
 
-jest.mock('../../src/js/views/updateScore.js', () => {
+jest.mock('../../../src/js/views/updateScore.js', () => {
   return {
     __esModule: true, // mandatory for mocking and ES6 module
     default: jest.fn(() => true),
