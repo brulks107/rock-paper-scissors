@@ -1,5 +1,5 @@
 import * as resultText from '../views/resultText.js';
-import computerModule from '../lib/computerChoice.js';
+import computerModule from '../lib/computer.js';
 import {
   increaseUserScore,
   increaseComputerScore,

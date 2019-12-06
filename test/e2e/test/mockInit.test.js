@@ -1,4 +1,4 @@
-import computer from '../../../src/js/lib/computerChoice.js';
+import computer from '../../../src/js/lib/computer.js';
 
 describe('On init', function () {
   it('score shows 2:0', function () {

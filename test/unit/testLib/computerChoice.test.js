@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import computer from '../../../src/js/lib/computerChoice';
+import computer from '../../../src/js/lib/computer';
 
 describe('Computer choice', () => {
   const mockMath = Object.create(global.Math);
