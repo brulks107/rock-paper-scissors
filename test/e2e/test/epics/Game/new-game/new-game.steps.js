@@ -1,8 +1,8 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
 
 Given(/^game started$/, () => {
-  cy.visit('index.html');
-  cy.url().should('be.equal', 'http://localhost:8081/index.html');
+  cy.visit('');
+  cy.url().should('contains', 'http://localhost:8090');
 });
 
 When(/^player clicks on -new game-$/, () => {
