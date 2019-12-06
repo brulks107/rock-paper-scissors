@@ -20,7 +20,10 @@ Enjoy and don't try to cheat the system (it is imposible :^|)
 ### Start the server
 ```npm run app:serve```
 
-By default, it starts the server in http://localhost:8080. If the port is busy, it will start in the next free port
+By default, it starts the server in http://localhost:8090. If the port is busy, it will start in the next free port.
+
+If you want to start the app in another port, launch the command
+```npm run app:serve -- -p <PORT>```
 
 ### Access the app
 
