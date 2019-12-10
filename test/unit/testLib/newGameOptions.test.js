@@ -47,7 +47,7 @@ describe('End of game', () => {
       endOfGame();
       expect(resultText.changeTextSecondRow).toBeCalledWith('Maybe next time');
     });
-    test('paint with loose color', () => {
+    test('paint with lose color', () => {
       endOfGame();
       expect(resultText.changeToResultColor).toBeCalledWith('#a8251d');
     });
