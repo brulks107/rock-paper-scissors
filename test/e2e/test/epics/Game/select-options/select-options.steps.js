@@ -1,10 +1,5 @@
 import { Given, When, Then, Before, After } from 'cypress-cucumber-preprocessor/steps';
 
-Given(/^game started$/, () => {
-  cy.visit('');
-  cy.url().should('contains', 'http://localhost:8090');
-});
-
 Given(/^computer select an option (.+)$/, computeroption => {
   cy.window().then((window) => {
     return window.computer.computerChoice = () => computeroption
