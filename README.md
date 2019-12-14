@@ -27,6 +27,6 @@ If you want to start the app in another port, launch the command
 
 ### Access the app
 
-Assuming the servers is started in port 8080, just navigate to http://localhost:8080/index
+Assuming the servers is started in port 8090, just navigate to http://localhost:8090
 
 
