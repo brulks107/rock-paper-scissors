@@ -10,7 +10,7 @@ If you want to restart the game, just press "New Game" button.
 
 Enjoy and don't try to cheat the system (it is imposible :^|)
 
-<img src="app-image.png">
+<img src="src/assets/app-image.png">
 
 ## Starting the app
 
