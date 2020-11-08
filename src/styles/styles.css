@@ -1,137 +1,240 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Indie+Flower&display=swap');
 :root {
-    --header-bg-color: #EBD704;
-    --body-bg-color: #41575a;
-    --font-family: 'Bree Serif', serif;
-    --score-border-radius: 2vw;
-    --player-score-border-radius: 10vw;
-    --player-score-height: 3.21vw;
-    --player-score-side: 25vw;
-    --new-game-radius: 6vw;
-    --images-size: 10vw;
+  --header-bg-color: #EBD704;
+  --body-bg-color: #41575a;
+  --font-family: 'Bree Serif', serif;
+  --score-border-radius: 2vw;
+  --player-score-border-radius: 10vw;
+  --player-score-height: 3.21vw;
+  --player-score-side: 25vw;
+  --new-game-radius: 6vw;
+  --images-size: 10vw;
 }
 
 * {
-    margin: 0% auto;
-    padding: 0%;
-    box-sizing: content-box;
+  margin: 0% auto;
+  padding: 0%;
+  box-sizing: content-box;
 }
 
 html, body {
-    background-color: var(--body-bg-color);
-    height: auto;
+  background-color: var(--body-bg-color);
+  height: auto;
 }
 
 header {
-    background-color: var(--header-bg-color);
-    /* padding: 0.5%; */
-    height: 2.1vw;
+  background-color: var(--header-bg-color);
+  height: 2.1vw;
 }
 
-header > h1 {
-    color: var(--body-bg-color);
-    text-align: center;
-    font-family: var(--font-family);
-    font-size: 1.5vw
+header>h1 {
+  color: var(--body-bg-color);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 1.5vw
 }
 
 .score {
-    margin: 2vw 20vw;
-    border: solid var(--header-bg-color);
-    border-radius: var(--score-border-radius);
-    text-align: center;
-    font-size: 10vw;
-    font-family: 'Indie Flower', cursive;
-    height: 15vw;
+  margin: 2vw 20vw;
+  border: solid var(--header-bg-color);
+  border-radius: var(--score-border-radius);
+  text-align: center;
+  font-size: 10vw;
+  font-family: 'Indie Flower', cursive;
+  height: 15vw;
 }
 
 .score-label {
-    background-color: white;
-    width: 12.5vw;
-    border-radius: var(--player-score-border-radius);
-    font-family: var(--font-family);
-    position: absolute;
-    font-size: 1.5vw;
-    text-align: center;
+  background-color: white;
+  width: 12.5vw;
+  border-radius: var(--player-score-border-radius);
+  font-family: var(--font-family);
+  position: absolute;
+  font-size: 1.5vw;
+  text-align: center;
 }
 
 #user-label {
-    top: var(--player-score-height);
-    left: var(--player-score-side);
+  top: var(--player-score-height);
+  left: var(--player-score-side);
 }
 
 #machine-label {
-    top: var(--player-score-height);
-    right: var(--player-score-side);
+  top: var(--player-score-height);
+  right: var(--player-score-side);
 }
 
 .new-game {
-    height: var(--new-game-radius);
-    width: var(--new-game-radius);
-    text-align: center;
-    line-height: 4vw;
-    border: 0.6vw solid black;
-    border-radius: 50%;    
-    background: #a8251d;
-    color: white;
-    font-size: 1.15vw;
-    font-family: 'Indie Flower', cursive;
-    position: absolute;
-    top: 15.9vw;
-    left: 46.5vw;
-    transition: border 0.3s ease;
-    transition: top, left, line-height 0s;
+  height: var(--new-game-radius);
+  width: var(--new-game-radius);
+  text-align: center;
+  line-height: 4vw;
+  border: 0.6vw solid black;
+  border-radius: 50%;
+  background: #a8251d;
+  color: white;
+  font-size: 1.15vw;
+  font-family: 'Indie Flower', cursive;
+  position: absolute;
+  top: 15.9vw;
+  left: 46.5vw;
+  transition: border 0.3s ease;
+  transition: top, left, line-height 0s;
+  outline: 0px;
 }
 
 .new-game:hover {
-    cursor: pointer;
-    border: 0.6vw solid grey;
-    /* top: 31.8vh;
-    left: 46.3vw; */
-    line-height: 4.2vw;
+  cursor: pointer;
+  border: 0.6vw solid grey;
+  line-height: 4.2vw;
 }
 
 .result {
+  margin: 5vw;
+  width: auto;
+  text-align: center;
+  height: 4vw;
+}
+
+#result-text {
+  font-family: var(--font-family);
+  font-size: 2.3vw;
+  color: white;
+  padding: auto;
+}
+
+.choices-block {
+  text-align: center;
+  height: 15vw;
+  /* background-color: #a8251d; */
+}
+
+.choice {
+  display: inline-block;
+  border: 1.3vw solid black;
+  border-radius: 50%;
+  height: var(--images-size);
+  width: var(--images-size);
+  margin: 0vw 6vw;
+  transition: background-color, border, 0.3s ease;
+  transition: margin 0s;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: grey;
+  border: 1.3vw solid grey;
+  /* margin: 2.8vw 5.8vw; */
+}
+
+/* Mobile responsive */
+
+@media screen and (max-width: 500px) {
+  :root {
+    --player-score-height: 11.21vw;
+    --player-score-side: 12vw;
+    --new-game-radius: 20vw;
+    --images-size: 22vw;
+  }
+  header {
+    height: 7.1vw;
+  }
+  header>h1 {
+    font-size: 4.5vw
+  }
+  .score-label {
+    width: 31.5vw;
+    font-size: 4vw;
+    text-align: center;
+  }
+  .score {
+    margin: 2vw 4vw;
+    font-size: 10vw;
+    font-family: 'Indie Flower', cursive;
+    height: 75vw;
+    border-width: 5px;
+  }
+  .new-game {
+    height: var(--new-game-radius);
+    width: var(--new-game-radius);
+    line-height: 8vw;
+    border: 1.8vw solid black;
+    font-size: 3.9vw;
+    top: 57vw;
+    left: 38vw;
+    outline: 0px;
+  }
+  .new-game:hover {
+    height: var(--new-game-radius);
+    width: var(--new-game-radius);
+    line-height: 8vw;
+    border: 1.8vw solid black;
+    font-size: 3.9vw;
+    top: 57vw;
+    left: 38vw;
+  }
+  .new-game:active {
+    border: 1.8vw solid grey;
+  }
+  .score-board {
+    top: 8vw;
+    left: 14vw;
+    font-size: 42vw;
+    position: fixed;
+  }
+  .result {
     margin: 5vw;
     width: auto;
     text-align: center;
     height: 4vw;
-}
-
-#result-text {
+  }
+  #result-text {
     font-family: var(--font-family);
-    font-size: 2.3vw;
+    font-size: 5.3vw;
     color: white;
-    padding: auto;
-}
-
-.choices-block {
+    padding: 1vw 1vw;
     text-align: center;
-    height: 15vw;
-}
-
-.choice {
+  }
+  .choices-block {
+    text-align: center;
+    height: 69vw;
+    width: 100vw;
+    bottom: 0;
+    position: fixed;
+    /* background-color: #a8251d; */
+  }
+  .choice {
     display: inline-block;
-    border: 1.3vw solid black;
+    border: 2.3vw solid black;
     border-radius: 50%;
     height: var(--images-size);
     width: var(--images-size);
     margin: 0vw 6vw;
     transition: background-color, border, 0.3s ease;
     transition: margin 0s;
-}
-
-.choice:hover {
+  }
+  .choice:hover {
     cursor: pointer;
     background-color: grey;
-    border: 1.3vw solid grey;
-    /* margin: 2.8vw 5.8vw; */
+    border: 2.3vw solid grey;
+  }
+  @media screen and (max-height: 820px) {
+    .choices-block {
+      text-align: center;
+      height: 57vw;
+      width: 100vw;
+      bottom: 0;
+      position: fixed;
+    }
+    .choice {
+      display: inline-block;
+      border: 2.3vw solid black;
+      border-radius: 50%;
+      height: var(--images-size);
+      width: var(--images-size);
+      margin: 0vw 3vw;
+      transition: background-color, border, 0.3s ease;
+      transition: margin 0s;
+    }
+  }
 }
-
-/* .footer {
-    height: 5%;
-    background-color: black;
-} */
-
-
-
