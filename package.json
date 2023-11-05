@@ -1,8 +1,9 @@
 {
   "name": "rock-paper-scissors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Amazing game to play mitical rock-paper-scissors with computer",
-  "author": "amadridlar",
+  "author": "brulks107",
+  "license": "ISC",
   "directories": {
     "test": "test"
   },
@@ -17,6 +18,10 @@
     "sonar": "sonar-scanner -D sonar-project.properties",
     "test": "jest --config=test/jest.config.js",
     "test:coverage": "jest --config=test/jest.config.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brulks107/rock-paper-scissors.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
