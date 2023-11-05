@@ -1,8 +1,9 @@
 {
   "name": "rock-paper-scissors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Amazing game to play mitical rock-paper-scissors with computer",
-  "author": "amadridlar",
+  "author": "brulks107",
+  "license": "ISC",
   "directories": {
     "test": "test"
   },
@@ -18,25 +19,27 @@
     "test": "jest --config=test/jest.config.js",
     "test:coverage": "jest --config=test/jest.config.js --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brulks107/rock-paper-scissors.git"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
     "babel-plugin-rewire": "^1.2.0",
-    "babel-preset-minify": "^0.5.1",
-    "chai": "^4.2.0",
-    "cucumber-html-reporter": "^5.2.0",
-    "cypress": "^5.5.0",
-    "cypress-cucumber-preprocessor": "^4.0.0",
-    "eslint": "^7.12.1",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.1",
+    "babel-preset-minify": "^0.5.2",
+    "chai": "^4.3.10",
+    "cucumber-html-reporter": "^5.5.1",
+    "cypress": "^5.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.29.0",
     "http-server": "^0.12.3",
     "jest": "^24.9.0",
-    "multiple-cucumber-html-reporter": "^1.18.0",
-    "rimraf": "^3.0.0",
-    "sonar-scanner": "^3.1.0",
-    "sonarqube-scanner": "^2.7.0"
+    "multiple-cucumber-html-reporter": "^1.21.6",
+    "rimraf": "^3.0.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
